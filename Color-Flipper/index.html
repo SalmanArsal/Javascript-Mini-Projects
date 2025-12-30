@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <h1>Background Color : <span id="color-code"></span></h1>
+    <button>click me</button>
+
+
+    <script>
+        document.getElementsByTagName('button')[0].onclick = () =>{
+            let chars = "0123456789abcdef"
+            let color_code = "#"
+
+            for(let i=1; i<=6; i++){
+                let randomIndex = Math.round(Math.random() * (chars.length - 1))
+                color_code += chars[randomIndex];
+            }
+            document.getElementsByTagName('body')[0].style.backgroundColor = color_code
+            document.getElementById("color-code").innerHTML = color_code
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,9 @@
+.tic-tac-toe-table{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    width: 30%;
+    button{
+        height: 5rem;
+
+    }
+}

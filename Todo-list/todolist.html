@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" placeholder="Enter To Do" />
+      <button>Add Todo</button>
+    </form>
+    <button id="a">display</button>
+    <ul class="todos"></ul>
+
+    <script>
+      let form = document.querySelector("form");
+      let todos = [];
+      let todos_sec = document.querySelector(".todos");
+      let btn = document.getElementById("a");
+
+      form.addEventListener("submit", (event) => {
+        todos.push(event.target[0].value);
+
+        todos_sec.innerHTML = "";
+          for (const todo of todos) {
+            todos_sec.innerHTML += `<li>${todo}</li>`
+          }
+
+        form.reset();
+        event.preventDefault();
+      });
+    </script>
+  </body>
+</html>
