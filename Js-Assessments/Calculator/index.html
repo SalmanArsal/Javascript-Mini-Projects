@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        table{
+            box-shadow: 0px 0px 2px black;
+            border-radius: .3rem;
+            padding: .5rem;
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: rgb(147, 145, 145);
+        }
+        td{
+            background-color: rgb(7, 6, 6);
+            color: white;
+            padding: 1rem;
+            border-radius: .5rem;
+        }
+        td:hover{
+            cursor: pointer;
+            background-color: rgb(81, 81, 81);
+        }
+        #screen{
+            padding: .5rem;
+            width: 100%;
+            text-align: center;
+            background-color: darkolivegreen;
+        }
+        ::placeholder{
+            font-weight: bold;
+            letter-spacing: .5rem;
+            color: #474646;
+        }
+    </style>
+</head>
+<body>
+    
+    <table>
+        <tr>
+            <td colspan="4">
+                <input type="text" id="screen" placeholder="SCREEN">
+            </td>
+        </tr>
+        <tr>
+            <td class="button">7</td>
+            <td class="button">8</td>
+            <td class="button">9</td>
+            <td class="button">+</td>
+        </tr>
+        <tr>
+            <td class="button">4</td>
+            <td class="button">5</td>
+            <td class="button">6</td>
+            <td class="button">-</td>
+        </tr>
+        <tr>
+            <td class="button">1</td>
+            <td class="button">2</td>
+            <td class="button">3</td>
+            <td class="button">*</td>
+        </tr>
+        <tr>
+            <td class="button">0</td>
+            <td class="button">00</td>
+            <td class="button">.</td>
+            <td class="button">/</td>
+        </tr>
+        <tr>
+            <td class="ac">Ac</td>
+            <td class="c">C</td>
+            <td colspan="2" class="equals">=</td>
+        </tr>
+    </table>
+    
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button>Generate Color Code</button>
+    <h1>Color Code is <span></span></h1>
+
+    <script>
+        const btn = document.querySelector("button")
+        const span = document.querySelector("span")
+       
+        btn.addEventListener("click", () =>{
+            let colorCode = "#";
+            const str = "abcdef0123456789"
+            for(let i=1;i<=6;i++){
+                let i = Math.trunc(Math.random() * str.length)
+                colorCode += str[i]
+            }
+            span.innerText = colorCode
+            document.querySelector("body").style.backgroundColor = colorCode
+        })
+    </script>
+</body>
+</html>

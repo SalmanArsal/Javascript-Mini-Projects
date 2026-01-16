@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="auth.css">
+
+</head>
+<body>
+    <form action="">
+        <div>
+            <label for="">Username</label>
+            <input type="text" name="username">
+        </div>
+        <div>
+            <label for="">Password</label>
+            <input type="password" name="password">
+        </div>
+        <div>
+            <label for="">Email</label>
+            <input type="email" name="email">
+        </div>
+        <div>
+            <label for="">Phone Number</label>
+            <input type="tel" name="phone">
+        </div>
+        <div>
+            <input type="submit" value="Sign Up">
+        </div>
+        <div>
+            <a href="./login.html">Already a User?</a>
+        </div>
+    </form>
+
+
+    <script>
+        const form = document.querySelector("form")
+        let signup_credentials =  JSON.parse(localStorage.getItem("signup_credentials")) || []
+        form.addEventListener("submit", (e) =>{
+            e.preventDefault()
+            let credentials = {
+                username: e.target.username.value,
+                password: e.target.password.value,
+                email: e.target.email.value,
+                phone: e.target.phone.value,
+            }
+            
+            signup_credentials.push(credentials)
+
+            localStorage.setItem("signup_credentials", JSON.stringify(signup_credentials))
+            window.location.href = "./login.html"
+        })
+    </script>
+</body>
+</html>

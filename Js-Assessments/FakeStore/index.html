@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>E-Commerce App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2 class="logo">🛒 FakeStore</h2>
+
+    <div style="display: flex; gap: 2rem; align-items: center;">
+      <p>Hello <span id="wish"></span></p>
+      <a href="./login.html"><button id="logout">Logout</button></a>
+    </div>
+
+    <select name="category" class="category">
+      <option value="all">All</option>
+      <option value="men's clothing">Men's Clothing</option>
+      <option value="women's clothing">Women's Clothing</option>
+      <option value="electronics">Electronics</option>
+      <option value="jewelery">Jewelery</option>
+    </select>
+  </nav>
+
+  <div id="main" class="product-container">
+    <h1>Loading...</h1>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+</html>

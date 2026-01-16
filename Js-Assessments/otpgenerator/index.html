@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        small{
+            display: none;
+        }
+        #valid{
+            color: green;
+        }
+        #invalid{
+            color: red;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <button class="otp-btn">Generate Otp</button> <br> <br>
+
+    <form>
+        <input type="text" placeholder="enter otp" name="otp"> <br>
+        <small id="valid">otp is verified</small>
+        <small id="invalid">otp is invalid</small> <br>
+        <button>submit</button>
+    </form>
+
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+        }
+        body{
+            height: 100vh;
+            align-content: center;
+            text-align: center;
+
+            form{
+                text-align: left;
+                width: 300px;
+                margin: 10px auto;
+                label{
+                    font-size: 16px;
+                }
+                input{
+                    width: 100%;
+                    padding: 10px;
+                }
+                button{
+                    background-color: aqua;
+                    padding: 10px;
+                    border-radius: 5px;
+                    margin-top: 5px;
+                }
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Age Calculator</h1>
+    <form>
+        <label>Select Date of Birth</label> <br>
+        <input type="date" name="dobinput"> <br>
+        <button type="submit">Check Age</button>
+    </form>
+
+    <h1>Your Age is <span></span></h1>
+
+    <script src="./script.js"></script>
+</body>
+</html>

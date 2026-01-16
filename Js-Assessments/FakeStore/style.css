@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f4f6f8;
+}
+
+/* Navbar */
+.navbar {
+  background: #1e1e2f;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 22px;
+}
+
+.category {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* Products Grid */
+.product-container {
+  padding: 30px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* Card */
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+}
+
+/* Product Image */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  cursor: pointer;
+}
+
+/* Card Content */
+.card h1 {
+  font-size: 18px;
+  color: #2c3e50;
+  margin: 10px 0;
+}
+
+.card p {
+  font-size: 14px;
+  color: #555;
+  height: 40px;
+  overflow: hidden;
+}
+
+/* Button */
+.card button {
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px;
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.card button:hover {
+  background: #ff4757;
+}
+
+
+#wish{
+  text-transform: capitalize;
+}
+#logout{
+  background-color: red;
+  color: white;
+  padding: 10px 20px;
+
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form action="">
+      <input type="text" placeholder="Enter a Task" name="task" />
+      <button type="submit">Add Task</button>
+    </form>
+    <ol class="list"></ol>
+
+    <script>
+      const list = document.querySelector(".list");
+      let form = document.querySelector("form");
+      let arr = [];
+
+      function renderList() {
+        list.innerHTML = ""; // making the list empty before adding the new task
+
+        arr.forEach((item, id) => {
+          list.innerHTML += `
+            <li>
+                ${item}
+                <button onclick="handleDelete(${id})">Delete</button>
+                <button onclick="handleEdit(${id})">Edit</button>
+            </li>
+        `;
+        });
+      }
+
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        const task = e.target.task.value;
+        arr.push(task);
+       
+        renderList()
+        form.reset()
+      });
+
+
+      function handleDelete(id) {
+        arr = arr.filter((_ , index) => {
+          return id !== index;
+        });
+
+        renderList()
+      }
+
+      function handleEdit(){
+        // edit logic 
+      }
+    </script>
+  </body>
+</html>

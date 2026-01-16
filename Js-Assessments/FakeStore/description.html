@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Product Description</title>
+  <link rel="stylesheet" href="description.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <h2>🛒 FakeStore</h2>
+  </nav>
+
+  <div class="container">
+    <div class="descr">
+        <div class="spinner"></div>
+    </div>
+  </div>
+
+  <script>
+    const descDiv = document.querySelector(".descr");
+
+    (async () => {
+      let product_id = JSON.parse(localStorage.getItem("product_id"));
+      let response = await fetch(`https://fakestoreapi.com/products/${product_id}`);
+      let product = await response.json();
+
+      descDiv.innerHTML = `
+        <div class="product-image">
+          <img src="${product.image}" alt="">
+        </div>
+
+        <div class="product-details">
+          <h1>${product.title}</h1>
+          <p class="description">${product.description}</p>
+
+          <h2 class="price">$${product.price}</h2>
+
+          <div class="rating">
+            ⭐ ${product.rating.rate} / 5
+          </div>
+
+          <div class="actions">
+            <button class="cart-btn">Add to Cart</button>
+            <button class="buy-btn">Buy Now</button>
+          </div>
+        </div>
+      `;
+    })();
+  </script>
+</body>
+</html>

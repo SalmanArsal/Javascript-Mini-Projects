@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .game-board{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            height: 30vh;
+            width: 30%;
+            button{
+                background-color: white;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="game-board">
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+        <button></button>
+    </div>
+
+
+    <script>
+
+        let combinations = [
+            [0,1,2] , [3,4,5], [6,7,8], [0,3,6], [1,4,7], [2,5,8], [0,4,8], [2,4,6]
+        ]
+
+        let playerX = []
+        let playerO = []
+
+        let currentPlayer = "X"
+        const btns = document.querySelectorAll("button")
+        btns.forEach((item, index) =>{
+            item.addEventListener("click", (e) =>{
+                if(item.innerText !== "") return; 
+
+                item.innerText = currentPlayer
+                currentPlayer === "X" ? currentPlayer = "O" : currentPlayer = "X"   
+                
+                if(currentPlayer === "X"){
+                    playerO.push(index)
+                    if (checkWinner(playerO)){
+                        console.log("player O wins");
+                    }
+                   
+                }
+                else{
+                    playerX.push(index)
+                    if (checkWinner(playerX)){
+                        console.log("player X wins");
+                    }
+                }
+            })
+        })
+
+        function checkWinner(player){
+            return combinations.some(item => {
+                return item.every(i => player.includes(i))
+            })
+        }
+    </script>
+</body>
+</html>

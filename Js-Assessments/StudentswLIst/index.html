@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="">
+        <input type="text" placeholder="Enter a Student name" name="std">
+        <button type="submit">Add to List</button>
+    </form>
+    <ol class="list">
+
+    </ol>
+    <script>
+        const list = document.querySelector(".list")
+        let form = document.querySelector("form")
+        form.addEventListener("submit", (e) =>{
+            e.preventDefault()
+            const student = e.target.std.value
+            list.innerHTML += `<li>${student}</li>`
+
+            e.target.std.value = ""
+        })
+    </script>
+</body>
+</html>
