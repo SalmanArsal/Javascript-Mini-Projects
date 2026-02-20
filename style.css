@@ -1,0 +1,50 @@
+body{
+    overflow-x: hidden;
+}
+.products {
+  padding: 40px 20px;
+  background: linear-gradient(to right, #ffd95b, #ffd95b);
+  min-height: 100vh;
+}
+
+/* Improve card hover effect */
+.products .card {
+  transition: all 0.3s ease-in-out;
+  border-radius: 16px;
+}
+
+.products .card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Image smooth zoom */
+.products .card img {
+  transition: transform 0.3s ease-in-out;
+}
+
+.products .card:hover img {
+  transform: scale(1.05);
+}
+
+/* Title styling */
+.products .card-title {
+  font-size: 0.9rem;
+  min-height: 40px;
+  overflow: hidden;
+}
+
+
+/* home page design */
+.banner1, .banner2, .banner3{
+  height: 100vh;
+}
+.banner1{
+  background:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url("./assets/images/laptop.jpg") no-repeat center/cover;
+}
+.banner2{
+  background:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url("./assets/images/cloths.jpg") no-repeat center/cover;
+}
+.banner3{
+  background:  linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.4)), url("./assets/images/gold.jpg") no-repeat center/cover;
+}
